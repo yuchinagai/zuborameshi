@@ -12,8 +12,13 @@
   <body>
     <!-- パーシャルフォームheaderの呼び出し -->
     <%= render "shared/header" %>
-
     <div class="container">
+      <!-- パーシャルフォームflashの呼び出し -->
+      <div class="row">
+        <div class="col-md-12">
+          <%= render "shared/flash" %>
+        </div>
+      </div>
       <div class="row">
         <%= yield %>
       </div>

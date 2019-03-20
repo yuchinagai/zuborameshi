@@ -1,0 +1,10 @@
+<div class="col-md-10 offset-md-1 mt-5">
+  <h2><%= @recipe.title %></h2>
+  <hr>
+  <b>材料: </b><%= simple_format @recipe.material %>
+  <hr>
+  <h4>作り方</h4>
+  <%= simple_format @recipe.body %>
+  <hr>
+  <b>ズボラアドバイス: </b><%= simple_format @recipe.point %>
+</div>

@@ -9,8 +9,15 @@ class RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.new(recipe_params)
-    @recipe.save
-    redirect_to @recipe, notice: "レシピを登録しました。"
+    if @recipe.save
+      redirect_to @recipe, notice: "書籍を登録しました。"
+    else
+      render :new
+    end
+  end
+
+  def show
+    @recipe = Recipe.find(params[:id])
   end
 
   private
