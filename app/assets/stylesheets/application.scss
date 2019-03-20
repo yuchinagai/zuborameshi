@@ -12,3 +12,10 @@
  *
  */
 @import "bootstrap";
+
+.navbar-brand {
+  background: url("logo.png") no-repeat left center;
+  background-size: contain;
+  height: 50px;
+  width: 153px;
+}
