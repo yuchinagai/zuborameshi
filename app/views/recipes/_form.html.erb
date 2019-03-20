@@ -2,19 +2,23 @@
   <!-- 変数をrecipeをobjという名前で渡します。他のモデルのエラー内容を表示する可能性があるので、汎用性のあるobjという名前にしています。 -->
   <%= render "shared/errors", obj: recipe %>
   <div class="form-group">
-    <%= form.label :レシピ名 %>
+    <%= form.label :title %>
     <%= form.text_field :title, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= form.label :材料 %>
+    <%= form.label :new_image %>
+    <%= form.file_field :new_image, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :material %>
     <%= form.text_area :material, rows: 5, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= form.label :調理方法 %>
+    <%= form.label :body %>
     <%= form.text_area :body, rows: 5, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= form.label :ワンポイントアドバイス %>
+    <%= form.label :point %>
     <%= form.text_field :point, class: "form-control" %>
   </div>
   <%= form.submit class: "btn btn-primary" %>

@@ -1,0 +1,13 @@
+ja:
+  recipes:
+    new:
+      title: レシピ登録
+    show:
+      title: レシピ名
+      material: 材料
+      body: 作り方
+      point: ズボラポイント
+      edit: 編集
+      return: 戻る
+    edit:
+      title: レシピ更新
