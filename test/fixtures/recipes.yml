@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  material: MyText
+  body: MyText
+  point: MyString
+  iine: 1
+  muzukashiine: 1
+
+two:
+  title: MyString
+  material: MyText
+  body: MyText
+  point: MyString
+  iine: 1
+  muzukashiine: 1
