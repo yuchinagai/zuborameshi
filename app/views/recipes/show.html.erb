@@ -7,6 +7,8 @@
     <div class="col-md-8">
       <h2><%= @recipe.title %></h2>
         <hr>
+        <b><%= t '.category' %>：</b><%= @recipe.category&.name %>
+        <hr>
         <b><%= t '.material' %>：</b><%= simple_format @recipe.material %>
     </div>
   </div>

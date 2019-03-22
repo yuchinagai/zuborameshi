@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   before_action :set_recipe, only: [:show, :edit, :update, :destroy]
-  
+
   def index
     @recipes = Recipe.all
   end
@@ -40,7 +40,7 @@ class RecipesController < ApplicationController
   private
 
   def recipe_params
-    params.require(:recipe).permit(:title, :material, :body, :point, :new_image)
+    params.require(:recipe).permit(:title, :material, :body, :point, :new_image, :category_id)
   end
 
   def set_recipe

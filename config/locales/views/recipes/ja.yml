@@ -9,6 +9,7 @@ ja:
       point: ズボラポイント
       edit: 編集
       return: 戻る
+      category: カテゴリー
     edit:
       title: レシピ更新
       delete: 削除
@@ -18,3 +19,7 @@ ja:
       chancel: キャンセル
     index:
       point: ズボラポイント
+      category: カテゴリー
+      material: 材料
+    form:
+      include_blank: カテゴリーを選択して下さい

@@ -1,4 +1,5 @@
 class Recipe < ApplicationRecord
+  belongs_to :category
   # has_one_attachedはレコードと画像が1対1の関係性を表します。画像が複数ある場合はhas_many_attachedを指定します。has_one_attached [:プロパティ名] ※プロパティ名はimageやavatar等の名前にします。
   has_one_attached :image
   attribute :new_image
