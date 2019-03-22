@@ -18,6 +18,8 @@ ja:
         user_name: ニックネーム
         avatar: プロフィール画像
         password: パスワード
+        password_confirmation: パスワード再入力
+        current_password: 現在のパスワード
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
