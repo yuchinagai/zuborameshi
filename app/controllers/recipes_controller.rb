@@ -2,7 +2,7 @@ class RecipesController < ApplicationController
   before_action :set_recipe, only: [:show, :edit, :update, :destroy]
 
   def index
-    @recipes = Recipe.all
+    @recipes = Recipe.page(params[:page]).per(4)
   end
 
   def new
@@ -12,7 +12,7 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new(recipe_params)
     if @recipe.save
-      redirect_to @recipe, notice: "書籍を登録しました。"
+      redirect_to @recipe, notice: "レシピを登録しました。"
     else
       render :new
     end
