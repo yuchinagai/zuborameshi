@@ -5,13 +5,10 @@
     <% else %>
       <%= image_tag "img_warning.png", class: "img-thumbnail", width: 60 %>
     <% end %>
-    <span><%= review.user.user_name %></span>
+    <%= link_to review.user.user_name, recipe_review_path(review.recipe, review) %>
+    <%= review.evaluation %>
   </div>
   <div>
-    <div>
-      <%= review.evaluation %>
-      <b><%= link_to review.body, recipe_review_path(review.recipe, review) %></b>
-    </div>
     <small><%= review.created_at.strftime("%Y年%m月%d日") %></small>
   </div>
   <%= simple_format review.body %>

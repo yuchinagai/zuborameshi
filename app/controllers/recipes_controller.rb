@@ -2,7 +2,6 @@ class RecipesController < ApplicationController
   before_action :set_recipe, only: [:edit, :update, :destroy]
 
   def index
-    @recipes = Recipe.with_attached_image.find_newest_recipes(params[:page])
   end
 
   def new
