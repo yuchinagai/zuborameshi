@@ -20,6 +20,13 @@ ja:
         password: パスワード
         password_confirmation: パスワード再入力
         current_password: 現在のパスワード
+      review:
+        body: コメント
+        evaluation: 評価
+        recipe_id: レシピ
+        recipe: レシピ
+        user_id: ユーザー
+        user: ユーザー
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'

@@ -1,8 +1,8 @@
 class RecipesController < ApplicationController
-  before_action :set_recipe, only: [:show, :edit, :update, :destroy]
+  before_action :set_recipe, only: [:edit, :update, :destroy]
 
   def index
-    @recipes = Recipe.page(params[:page]).per(4)
+    @recipes = Recipe.with_attached_image.find_newest_recipes(params[:page])
   end
 
   def new
@@ -19,6 +19,7 @@ class RecipesController < ApplicationController
   end
 
   def show
+    @recipe = Recipe.with_attached_image.includes(reviews: :user).find(params[:id])
   end
 
   def edit
