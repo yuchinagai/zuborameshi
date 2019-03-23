@@ -2,7 +2,7 @@
   <%= render "shared/errors", obj: review %>
   <div class="form-group">
     <%= form.label :evaluation %>
-    <%= form.select :evaluation, { t(".eva1") => "1", t(".eva2") => "2", t(".eva3") => "3" } , {}, class: "form-control" %>
+    <%= form.select :evaluation, Review.evaluations.keys.map {|k| [k, k]}, {}, class: "form-control" %>
   </div>
   <div class="form-group">
     <%= form.label t(".body") %>

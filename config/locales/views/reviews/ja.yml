@@ -6,16 +6,13 @@ ja:
       title: コメント編集
     form:
       back: 戻る
-      eva1: 簡単でおいしい
-      eva2: なんとか作れた
-      eva3: 難しいし、不味い
       body: コメント（140字以内）
     show:
       title: コメント一覧
       edit: 編集
       back: 戻る
       delete: 削除
-      modal_title: レビュー削除
-      question_review: "%{review}を削除しますか？"
+      modal_title: コメント削除
+      question_review: "本当に削除してもよろしいですか？"
       delete_action: 削除する
       chancel: キャンセル

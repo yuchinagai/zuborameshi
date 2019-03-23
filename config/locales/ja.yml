@@ -23,8 +23,8 @@ ja:
       review:
         body: コメント
         evaluation: 評価
-        recipe_id: レシピ
-        recipe: レシピ
+        recipe_id: コメント
+        recipe: コメント
         user_id: ユーザー
         user: ユーザー
     errors:
