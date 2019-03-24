@@ -1,0 +1,9 @@
+<div class="col-md-8 offset-md-2 mt-3">
+  <h2 class="text-center"><%= t '.title' %></h2>
+  <div class="mb-3">
+    <%= show_recipe_small_image @recipe %>
+    <span><%= @recipe.title %></span>
+  </div>
+  <hr>
+  <%= render partial: 'form', locals: { recipe: @recipe, review: @review } %>
+</div>

@@ -1,0 +1,15 @@
+<div>
+  <div>
+    <% if review.user.avatar.attached? %>
+      <%= image_tag review.user.avatar.variant(resize: "60x60"), class: "img-thumbnail" %>
+    <% else %>
+      <%= image_tag "img_warning.png", class: "img-thumbnail", width: 60 %>
+    <% end %>
+    <%= link_to review.user.user_name, recipe_review_path(review.recipe, review) %>
+    <%= review.evaluation %>
+  </div>
+  <div>
+    <small><%= review.created_at.strftime("%Y年%m月%d日") %></small>
+  </div>
+  <%= simple_format review.body %>
+</div>

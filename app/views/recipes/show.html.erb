@@ -1,0 +1,26 @@
+<div class="col-md-10 offset-md-1 mt-5">
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <!-- ビューヘルパー利用 -->
+      <%= show_recipe_image @recipe %>
+    </div>
+    <div class="col-md-8">
+      <h2><%= @recipe.title %></h2>
+        <hr>
+        <b><%= t '.category' %>：</b><%= @recipe.category&.name %>
+        <hr>
+        <b><%= t '.material' %>：</b><%= simple_format @recipe.material %>
+    </div>
+  </div>
+  <hr>
+  <h4><%= t '.body' %></h4>
+  <%= simple_format @recipe.body %>
+  <hr>
+  <b><%= t '.point' %>：</b><%= simple_format @recipe.point %>
+  <% if user_signed_in? %>
+    <%= link_to t(".review_new"), new_recipe_review_path(@recipe), class: "btn btn-info" %>
+  <% end %>
+  <%= link_to t(".return"), recipes_path, class: "btn btn-secondary" %>
+  <hr>
+  <%= render partial: "reviews/review", collection: @recipe.reviews %>
+</div>

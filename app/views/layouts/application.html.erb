@@ -7,9 +7,23 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <style type="text/scss">
+  </style>
   </head>
 
   <body>
-    <%= yield %>
+    <!-- パーシャルフォームheaderの呼び出し -->
+    <%= render "shared/header" %>
+    <div class="container">
+      <!-- パーシャルフォームflashの呼び出し -->
+      <div class="row">
+        <div class="col-md-12">
+          <%= render "shared/flash" %>
+        </div>
+      </div>
+      <div class="row">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>
