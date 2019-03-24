@@ -12,6 +12,9 @@
       <li class="nav-item">
         <%= link_to t(".new_recipe"), new_recipe_path, class: "nav-link" %>
       </li>
+      <li class="nav-item">
+        <%= link_to t(".category"), categories_path, class: "nav-link" %>
+      </li>
       <% if user_signed_in? %>
         <li class="nav-item">
           <%= link_to t(".edit_registration"), edit_user_registration_path, class: "nav-link" %>

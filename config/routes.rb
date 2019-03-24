@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   resources :recipes do
     resources :reviews, except: :index
   end
+  resources :categories
   root "recipes#index"
 end
