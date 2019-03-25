@@ -11,8 +11,8 @@
     <p><b><%= t ".point" %></b><br>
     <%= t (recipe.point) %></p>
     <hr>
-    <p><div class = "iine_button">いいね <%= recipe.likes_count %></div></p>
-    <p><div class = "muzukasiine_button">むずかしいね <%= recipe.hards_count %></div></p>
+    <p><div class = "iine_button">いいね <%= recipe.likes.count %></div></p>
+    <p><div class = "muzukasiine_button">むずかしいね <%= recipe.hards.count %></div></p>
   </div>
 <% end %>
 <div class="col-12">
