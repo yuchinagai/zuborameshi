@@ -3,8 +3,10 @@
     <div class="col-md-4 mb-4">
       <!-- ビューヘルパー利用 -->
       <%= show_recipe_image @recipe %>
-      <p><%= render 'likes/like', recipe: @recipe %></p>
-      <p><%= render 'hards/hard', recipe: @recipe %></p>
+      <div class="buttons row mt-4">
+        <div class="button1"><%= render 'likes/like', recipe: @recipe %></div>
+        <div class="button2"><%= render 'hards/hard', recipe: @recipe %></div>
+      </div>
     </div>
     <div class="col-md-8">
       <h2><%= @recipe.title %></h2>
