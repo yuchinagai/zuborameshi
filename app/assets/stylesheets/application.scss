@@ -29,3 +29,33 @@ body    {
   border: 1px solid #dcdcdc;
   background-color: #f8f8ff;
 }
+
+.message {
+    position: relative;
+}
+.message span.remark {
+    display: none;
+}
+.message a:hover span.remark {
+    background: none repeat scroll 0 0 #EEFFEE;
+    border: 1px solid #CCCCCC;
+    color: #000000;
+    display: block;
+    line-height: 1.2em;
+    margin: 0.5em;
+    padding: 0.5em;
+    position: absolute;
+    top: 50px;
+    width: 12em;
+}
+
+.iine_button{
+    background: linear-gradient(to right, #feb400, #FFE300);
+    line-height: 42px;
+    color: #6d3701;
+    font-size: 14px;
+    display: inline-block;
+    padding: 0 18px;
+    border-radius: 100px;
+    font-weight: bold;
+ }

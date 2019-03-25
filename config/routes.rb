@@ -6,4 +6,6 @@ Rails.application.routes.draw do
     resources :reviews, except: :index
   end
   resources :categories
+  post   '/like/:recipe_id' => 'likes#like',   as: 'like'
+  delete '/like/:recipe_id' => 'likes#unlike', as: 'unlike'
 end

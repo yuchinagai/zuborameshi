@@ -23,4 +23,12 @@
   <%= link_to t(".return"), recipes_path, class: "btn btn-secondary" %>
   <hr>
   <%= render partial: "reviews/review", collection: @recipe.reviews %>
+  <hr>
+  <%= render 'likes/like', recipe: @recipe %>
+</div>
+
+<div class="message">
+<a>パスタ
+<span class="remark">パスタは最安値500g90円。パスタを手に握って100円玉より大きいくらいが一人前150gの目安</span>
+</a>
 </div>
