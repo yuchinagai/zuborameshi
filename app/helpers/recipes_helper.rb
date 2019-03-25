@@ -14,13 +14,4 @@ module RecipesHelper
       image_tag "img_warning.png", class: "img-thumbnail", width: 50
     end
   end
-
-  def calusel1
-    "https://i.pinimg.com/originals/1f/aa/c3/1faac3b711a8366d4c42bc2d2dbf79cd.png"
-  end
-  def w
-    @carouselslide2
-    @carouselslide3
-  end
-
 end
