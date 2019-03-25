@@ -3,6 +3,8 @@
     <div class="col-md-4 mb-4">
       <!-- ビューヘルパー利用 -->
       <%= show_recipe_image @recipe %>
+      <p><%= render 'likes/like', recipe: @recipe %></p>
+      <p><%= render 'hards/hard', recipe: @recipe %></p>
     </div>
     <div class="col-md-8">
       <h2><%= @recipe.title %></h2>
@@ -10,21 +12,17 @@
         <b><%= t '.category' %>：</b><%= @recipe.category&.name %>
         <hr>
         <b><%= t '.material' %>：</b><%= simple_format @recipe.material %>
+        <hr>
+        <b><%= t '.body' %>：</b><%= simple_format @recipe.body %>
     </div>
   </div>
-  <hr>
-  <h4><%= t '.body' %></h4>
-  <%= simple_format @recipe.body %>
-  <hr>
   <b><%= t '.point' %>：</b><%= simple_format @recipe.point %>
+  <hr>
+  <%= render partial: "reviews/review", collection: @recipe.reviews %>
   <% if user_signed_in? %>
     <%= link_to t(".review_new"), new_recipe_review_path(@recipe), class: "btn btn-info" %>
   <% end %>
   <%= link_to t(".return"), recipes_path, class: "btn btn-secondary" %>
-  <hr>
-  <%= render partial: "reviews/review", collection: @recipe.reviews %>
-  <hr>
-  <%= render 'likes/like', recipe: @recipe %>
 </div>
 
 <div class="message">

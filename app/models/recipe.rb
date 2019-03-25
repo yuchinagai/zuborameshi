@@ -3,6 +3,8 @@ class Recipe < ApplicationRecord
   belongs_to :category
   has_many :likes, dependent: :destroy
   has_many :liking_users, through: :likes, source: :user
+  has_many :hards, dependent: :destroy
+  has_many :harding_users, through: :hards, source: :user
   # has_one_attachedはレコードと画像が1対1の関係性を表します。画像が複数ある場合はhas_many_attachedを指定します。has_one_attached [:プロパティ名] ※プロパティ名はimageやavatar等の名前にします。
   has_one_attached :image
   has_many :users, through: :reviews
