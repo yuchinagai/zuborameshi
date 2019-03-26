@@ -24,3 +24,12 @@ ja:
       material: 材料
     form:
       include_blank: カテゴリーを選択して下さい
+    all:
+      title: レシピ名
+      material: 材料
+      body: 作り方
+      point: ズボラポイント
+      new_image: 画像
+      image: 画像
+      category_id: カテゴリー
+      category: カテゴリー

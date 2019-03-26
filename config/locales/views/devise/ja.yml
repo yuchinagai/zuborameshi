@@ -12,6 +12,7 @@ ja:
         minimum_password_length: "%{length} 文字以上を入力して下さい"
         current_password: 変更を確認するために現在のパスワードが必要です
         account_delete: アカウントを削除する
+        log_out: ログアウト
         return: 戻る
         confirm: アカウント削除
     sessions:

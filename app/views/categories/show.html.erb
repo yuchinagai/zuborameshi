@@ -9,6 +9,11 @@
     <hr>
     <p><b><%= t ".point" %></b><br>
     <%= t (recipe.point) %></p>
+    <hr>
+      <div class="buttons row mt-4">
+        <div class="button1"><div class = "iine_button">いいね <%= recipe.likes_count %></div></div>
+        <div class="button2"><div class = "muzukasiine_button">むずかしいね <%= recipe.hards_count %></div></div>
+      </div>
   </div>
 <% end %>
 </div>
