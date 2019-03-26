@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root "recipes#index"
+  get "/about" => "recipes#about"
   devise_for :users
   resources :recipes do
     resources :reviews, except: :index
+    collection do
+      get :howto
+    end
   end
   resources :categories
   post   '/like/:recipe_id' => 'likes#like',   as: 'like'

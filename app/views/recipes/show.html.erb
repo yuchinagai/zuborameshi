@@ -23,10 +23,10 @@
         <b><%= t '.material' %>：</b><%= simple_format @recipe.material %>
         <hr>
         <b><%= t '.body' %>：</b><%= simple_format @recipe.body %>
+        <hr>
+        <b><%= t '.point' %>：</b><%= simple_format @recipe.point %>
     </div>
   </div>
-  <b><%= t '.point' %>：</b><%= simple_format @recipe.point %>
-  <hr>
   <%= render partial: "reviews/review", collection: @recipe.reviews %>
   <% if user_signed_in? %>
     <%= link_to t(".review_new"), new_recipe_review_path(@recipe), class: "btn btn-info" %>
