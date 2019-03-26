@@ -25,13 +25,14 @@
         <b><%= t '.body' %>：</b><%= simple_format @recipe.body %>
         <hr>
         <b><%= t '.point' %>：</b><%= simple_format @recipe.point %>
+        <hr>
+        <% if user_signed_in? %>
+          <%= link_to t(".review_new"), new_recipe_review_path(@recipe), class: "btn btn-info" %>
+        <% end %>
+        <%= link_to t(".return"), recipes_path, class: "btn btn-secondary" %>
+        <%= render partial: "reviews/review", collection: @recipe.reviews %>
     </div>
   </div>
-  <%= render partial: "reviews/review", collection: @recipe.reviews %>
-  <% if user_signed_in? %>
-    <%= link_to t(".review_new"), new_recipe_review_path(@recipe), class: "btn btn-info" %>
-  <% end %>
-  <%= link_to t(".return"), recipes_path, class: "btn btn-secondary" %>
 </div>
 
 <div class="message">
