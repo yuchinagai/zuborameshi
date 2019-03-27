@@ -1,11 +1,11 @@
 <div class="hard-link" id="hard-link-<%= @recipe.id %>">
   <% if current_user.hards.find_by(recipe_id: @recipe.id) %>
     <%= link_to hard_path(recipe.id), method: :post, remote: true do %>
-        <div class = "muzukasiine_button">むずかしいね <%= @recipe.hards.count %></div>
+        <div class = "muzukasiine_button">😵 <%= @recipe.hards.count %></div>
     <% end %>
   <% else %>
     <%= link_to hard_path(recipe.id), method: :post, remote: true do %>
-        <div class = "muzukasiine_button">むずかしいね <%= @recipe.hards.count %></div>
+        <div class = "muzukasiine_button">😵 <%= @recipe.hards.count %></div>
     <% end %>
   <% end %>
 </div>

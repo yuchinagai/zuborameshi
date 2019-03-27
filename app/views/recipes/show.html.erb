@@ -4,14 +4,14 @@
       <!-- ビューヘルパー利用 -->
       <%= show_recipe_image @recipe %>
       <% if user_signed_in? %>
-        <div class="buttons row mt-4">
+        <div class="buttons row mt-4 text-center">
           <div class="button1"><%= render 'likes/like', recipe: @recipe %></div>
           <div class="button2"><%= render 'hards/hard', recipe: @recipe %></div>
         </div>
       <% else %>
-        <div class="buttons row mt-4">
-          <div class="button1"><div class = "iine_button">いいね <%= @recipe.likes_count %></div></div>
-          <div class="button2"><div class = "muzukasiine_button">むずかしいね <%= @recipe.hards_count %></div></div>
+        <div class="buttons row mt-4 text-center">
+          <div class="button1"><div class = "iine_button">😋 <%= @recipe.likes_count %></div></div>
+          <div class="button2"><div class = "muzukasiine_button">😵 <%= @recipe.hards_count %></div></div>
         </div>
       <% end %>
     </div>
