@@ -1,20 +1,53 @@
 <%= render partial: 'shared/carousel' %>
-<% @recipes.each do |recipe| %>
-  <div class="col-lg-4 col-md-4 col-sm-6 mb-3 text-center">
-    <%= show_recipe_image recipe %>
-    <h4 class="mt-2"><%= link_to recipe.title, recipe_path(recipe) %></h4>
-    <p><b><%= t '.category' %></b><br>
-    <%= recipe.category&.name %></p>
-    <hr>
-    <p><b><%= t ".point" %></b><br>
-    <%= t (recipe.point) %></p>
-    <hr>
-      <div class="buttons row mt-4">
-        <div class="button1"><div class = "iine_button">😋 <%= recipe.likes_count %></div></div>
-        <div class="button2"><div class = "muzukasiine_button">😵 <%= recipe.hards_count %></div></div>
-      </div>
+<div class="text-center">
+<p class="padding"></p>
+<p class="padding"><%= image_tag("whatzubora.png", {:width => "200"}) %></p>
+<p>ズボラメシは料理ができない人のためのサイトです。</p>
+<p>難しい調理方法、表現等は一切ありません。</p>
+<p>『料理ができない。』ともう言わせません。</p>
+<p class="padding"></p>
+<hr>
+<p class="padding"><%= image_tag("category.png", {:width => "200"}) %></p>
+  <div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+      <%= link_to image_tag('c1.png', {:size => "200x200", :border => '0', :alt => '鶏肉'}), category_path(1) %>
+      <br>
+      <%= link_to "鶏肉", category_path(1) %>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+      <%= link_to image_tag('c2.png', {:size => "200x200", :border => '0', :alt => '豚肉'}), category_path(2) %>
+      <br>
+      <%= link_to "豚肉", category_path(2) %>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+      <%= link_to image_tag('c3.png', {:size => "200x200", :border => '0', :alt => '牛肉'}), category_path(3) %>
+      <br>
+      <%= link_to "牛肉", category_path(3) %>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+      <%= link_to image_tag('c4.png', {:size => "200x200", :border => '0', :alt => 'ごはんもの'}), category_path(4) %>
+      <br>
+      <%= link_to "ごはんもの", category_path(4) %>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+      <%= link_to image_tag('c5.png', {:size => "200x200", :border => '0', :alt => '魚'}), category_path(5) %>
+      <br>
+      <%= link_to "魚", category_path(5) %>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+      <%= link_to image_tag('c6.png', {:size => "200x200", :border => '0', :alt => '野菜'}), category_path(6) %>
+      <br>
+      <%= link_to "野菜", category_path(6) %>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+      <%= link_to image_tag('c7.png', {:size => "200x200", :border => '0', :alt => 'パスタ'}), category_path(7) %>
+      <br>
+      <%= link_to "パスタ", category_path(7) %>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+      <%= link_to image_tag('c8.png', {:size => "200x200", :border => '0', :alt => '麺類'}), category_path(8) %>
+      <br>
+      <%= link_to "麺", category_path(8) %>
+    </div>
   </div>
-<% end %>
-<div class="col-12">
-  <%= paginate @recipes %>
 </div>

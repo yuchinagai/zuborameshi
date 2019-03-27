@@ -14,10 +14,10 @@
 @import "bootstrap";
 
 .navbar-brand {
-  background: url("https://s3-ap-northeast-1.amazonaws.com/zuborameshiimage/logo.png") no-repeat left center;
-  background-size: contain;
-  height: 50px;
-  width: 153px;
+    background: url("https://s3-ap-northeast-1.amazonaws.com/zuborameshiimage/logo.png") no-repeat left center;
+    background-size: contain;
+    height: 50px;
+    width: 153px;
 }
 
 body    {
@@ -25,9 +25,9 @@ body    {
 }
 
 .user-box {
-  padding: 30px;
-  border: 1px solid #dcdcdc;
-  background-color: #f8f8ff;
+    padding: 30px;
+    border: 1px solid #dcdcdc;
+    background-color: #f8f8ff;
 }
 
 .message {
@@ -37,16 +37,31 @@ body    {
     display: none;
 }
 .message a:hover span.remark {
-    background: none repeat scroll 0 0 #EEFFEE;
-    border: 1px solid #CCCCCC;
-    color: #000000;
+    background: none repeat scroll 0 0 #FF9933;
+    color: #090b0b;
     display: block;
-    line-height: 1.2em;
     margin: 0.5em;
     padding: 0.5em;
     position: absolute;
     top: 50px;
-    width: 12em;
+    width: 5em;
+}
+
+.message2 {
+    position: relative;
+}
+.message2 span.remark {
+    display: none;
+}
+.message2 a:hover span.remark {
+    background: none repeat scroll 0 0 #F6F4F4;
+    color: #090b0b;
+    display: block;
+    margin: 0.5em;
+    padding: 0.5em;
+    position: absolute;
+    top: 50px;
+    width:  8em;
 }
 
 .iine_button{
@@ -58,7 +73,7 @@ body    {
     padding: 0 18px;
     border-radius: 100px;
     font-weight: bold;
- }
+}
 
 .muzukasiine_button{
     background: #F6F4F4;
@@ -69,7 +84,7 @@ body    {
     padding: 0 18px;
     border-radius: 100px;
     font-weight: bold;
- }
+}
 
 .buttons {  
     width: 100%;
@@ -83,3 +98,7 @@ body    {
     width: 50%;
     float: left;
 }  
+
+.padding {
+    padding: 50px;
+}

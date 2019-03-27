@@ -5,13 +5,21 @@
       <%= show_recipe_image @recipe %>
       <% if user_signed_in? %>
         <div class="buttons row mt-4 text-center">
-          <div class="button1"><%= render 'likes/like', recipe: @recipe %></div>
-          <div class="button2"><%= render 'hards/hard', recipe: @recipe %></div>
+          <div class="button1 iine_button message">
+            <a><%= render 'likes/like', recipe: @recipe %><span class="remark">いいね！</span></a>
+          </div>
+          <div class="button2 muzukasiine_button message2">
+            <a><%= render 'hards/hard', recipe: @recipe %><span class="remark">むずかしいね！</span></a>
+          </div>
         </div>
       <% else %>
         <div class="buttons row mt-4 text-center">
-          <div class="button1"><div class = "iine_button">😋 <%= @recipe.likes_count %></div></div>
-          <div class="button2"><div class = "muzukasiine_button">😵 <%= @recipe.hards_count %></div></div>
+          <div class="button1 iine_button message">
+            <a>😋 <%= @recipe.likes_count %><span class="remark">いいね！</span></a>
+          </div>
+          <div class="button2 muzukasiine_button message2">
+            <a>😵 <%= @recipe.hards_count %><span class="remark">むずかしいね！</span></a>
+          </div>
         </div>
       <% end %>
     </div>
@@ -26,11 +34,14 @@
         <hr>
         <b><%= t '.point' %>：</b><%= simple_format @recipe.point %>
         <hr>
+        <p class="padding"><%= image_tag("yc.png", {:width => "200"}) %></p>
+        <%= render partial: "reviews/review", collection: @recipe.reviews %>
+        <p class="padding">
         <% if user_signed_in? %>
           <%= link_to t(".review_new"), new_recipe_review_path(@recipe), class: "btn btn-info" %>
         <% end %>
         <%= link_to t(".return"), recipes_path, class: "btn btn-secondary" %>
-        <%= render partial: "reviews/review", collection: @recipe.reviews %>
+        </p>
     </div>
   </div>
 </div>

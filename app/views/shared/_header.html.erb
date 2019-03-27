@@ -13,9 +13,6 @@
         <%= link_to t(".all_recipe"), recipes_all_path, class: "nav-link" %>
       </li>
       <li class="nav-item">
-        <%= link_to t(".category"), categories_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item">
         <%= link_to t(".howto"), howtos_path, class: "nav-link" %>
       </li>
       <% if user_signed_in? %>
