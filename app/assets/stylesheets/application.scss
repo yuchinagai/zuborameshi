@@ -105,5 +105,18 @@ body    {
 
 a:link {color:#090b0b;}
 a:visited{color:#090b0b;} 
-a:hover{color:#090b0b;;} 
-a:active{color:#090b0b;;} 
+a:hover{color:#090b0b;} 
+a:active{color:#090b0b;} 
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.container {
+  min-height: 100%;
+  margin-bottom: -50px;
+}
+.footer {
+  height: 100px;
+  background-color: #F6F4F4;
+}
