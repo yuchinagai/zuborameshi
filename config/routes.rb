@@ -6,10 +6,11 @@ Rails.application.routes.draw do
   resources :recipes do
     resources :reviews, except: :index
     collection do
-      get :howto, :all
+      get :all
     end
   end
   resources :categories
+  resources :howtos
   post   '/like/:recipe_id' => 'likes#like',   as: 'like'
   delete '/like/:recipe_id' => 'likes#unlike', as: 'unlike'
   post   '/hard/:recipe_id' => 'hards#hard',   as: 'hard'

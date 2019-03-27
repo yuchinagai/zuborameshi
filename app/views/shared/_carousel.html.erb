@@ -6,25 +6,13 @@
   </ol>
   <div class="carousel-inner" role="listbox">
     <div class="carousel-item active">
-      <a href="https://mighty-sands-73432.herokuapp.com/categories/2">
-        <img src=
-        "https://s3-ap-northeast-1.amazonaws.com/zuborameshiimage/meat.png"
-        alt="responsive image" class="d-block img-fluid">
-      </a>
+      <%= link_to image_tag('meat.png', {:size => "1200x400", :class => 'd-block img-fluid', :alt => 'responsive image'}), category_path(1) %>
     </div>
     <div class="carousel-item">
-      <a href="https://mighty-sands-73432.herokuapp.com/categories/5">
-        <img src=
-        "https://s3-ap-northeast-1.amazonaws.com/zuborameshiimage/fish.png"
-        alt="responsive image" class="d-block img-fluid">
-      </a>
+      <%= link_to image_tag('fish.png', {:size => "1200x400", :class => 'd-block img-fluid', :alt => 'responsive image'}), category_path(5) %>
     </div>
     <div class="carousel-item">
-      <a href="https://mighty-sands-73432.herokuapp.com/categories/6">
-        <img src=
-        "https://s3-ap-northeast-1.amazonaws.com/zuborameshiimage/veg.png"
-        alt="responsive image" class="d-block img-fluid">
-      </a>
+      <%= link_to image_tag('veg.png', {:size => "1200x400", :class => 'd-block img-fluid', :alt => 'responsive image'}), category_path(6) %>
     </div>
   </div>
 </div>
