@@ -26,7 +26,8 @@
     <div class="col-md-8">
       <h2><%= @recipe.title %></h2>
         <hr>
-        <b><%= t '.category' %>：</b><%= @recipe.category&.name %>
+        <b><%= link_to "#{t '.category'}", categories_path %>：</b>
+        <%= link_to "#{@recipe.category&.name}", category_path("#{@recipe.category_id}") %>
         <hr>
         <b><%= t '.material' %>：</b><%= simple_format @recipe.material %>
         <hr>
@@ -34,7 +35,6 @@
         <hr>
         <b><%= t '.point' %>：</b><%= simple_format @recipe.point %>
         <hr>
-        <p class="padding"><%= image_tag("yc.png", {:width => "200"}) %></p>
         <%= render partial: "reviews/review", collection: @recipe.reviews %>
         <p class="padding">
         <% if user_signed_in? %>
@@ -44,10 +44,4 @@
         </p>
     </div>
   </div>
-</div>
-
-<div class="message">
-<a>パスタ
-<span class="remark">パスタは最安値500g90円。パスタを手に握って100円玉より大きいくらいが一人前150gの目安</span>
-</a>
 </div>

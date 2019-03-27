@@ -1,7 +1,7 @@
 module RecipesHelper
   def show_recipe_image(recipe)
     if recipe.image.attached?
-      image_tag recipe.image.variant(resize: "300x300"), class: "img-thumbnail"
+      link_to image_tag(recipe.image.variant(resize: "300x300"), class: "img-thumbnail"), recipe_path(recipe)
     else
       image_tag "img_warning.png", class: "img-thumbnail"
     end

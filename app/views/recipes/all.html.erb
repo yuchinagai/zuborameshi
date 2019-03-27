@@ -4,8 +4,8 @@
     <h4 class="mt-2"><%= link_to recipe.title, recipe_path(recipe) %></h4>
     <hr>
     <p>
-      <b><%= t '.category' %></b><br>
-      <%= recipe.category&.name %>
+      <b><%= link_to "#{t '.category'}", categories_path %></b><br>
+      <%= link_to "#{recipe.category&.name}", category_path("#{recipe.category_id}") %>
     </p>
     <hr>
     <p>

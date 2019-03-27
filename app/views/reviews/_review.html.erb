@@ -1,4 +1,5 @@
 <div>
+  <p class="padding"><%= image_tag("yc.png", {:width => "200"}) %></p>
   <div>
     <% if review.user.avatar.attached? %>
       <%= image_tag review.user.avatar.variant(resize: "60x60"), class: "img-thumbnail" %>
