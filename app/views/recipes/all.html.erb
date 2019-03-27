@@ -1,14 +1,16 @@
 <% @recipes.each do |recipe| %>
-  <div class="col-lg-4 col-md-4 col-sm-6 mb-3">
+  <div class="col-lg-4 col-md-4 col-sm-6 mb-3 text-center">
     <%= show_recipe_image recipe %>
     <h4 class="mt-2"><%= link_to recipe.title, recipe_path(recipe) %></h4>
-    <p><b><%= t '.category' %>：</b><%= recipe.category&.name %></p>
+    <p>
+      <b><%= t '.category' %></b><br>
+      <%= recipe.category&.name %>
+    </p>
     <hr>
-    <b><%= t '.material' %></b>
-    <div><%= simple_format recipe.material %></div>
-    <hr>
-    <p><b><%= t ".point" %></b><br>
-    <%= t (recipe.point) %></p>
+    <p>
+      <b><%= t ".point" %></b><br>
+      <%= t (recipe.point) %>
+    </p>
     <hr>
       <div class="buttons row mt-4">
         <div class="button1"><div class = "iine_button">いいね <%= recipe.likes_count %></div></div>

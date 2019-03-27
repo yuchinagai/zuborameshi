@@ -1,1 +1,45 @@
-<h1>料理難解用語一覧</h1>
+<div class="col-lg-12 col-md-12 col-sm-12 mb-3 text-center">
+<h2><%= t '.title' %></h2>
+  <div class="row">
+    <div class="col-md-4">
+      <%= link_to image_tag('c1.png', {:size => "300x300", :border => '0', :alt => '鶏肉'}), category_path(1) %>
+      <br>
+      <%= link_to "鶏肉", category_path(1) %>
+    </div>
+    <div class="col-md-4">
+      <%= link_to image_tag('c2.png', {:size => "300x300", :border => '0', :alt => '豚肉'}), category_path(2) %>
+      <br>
+      <%= link_to "豚肉", category_path(2) %>
+    </div>
+    <div class="col-md-4">
+      <%= link_to image_tag('c3.png', {:size => "300x300", :border => '0', :alt => '牛肉'}), category_path(3) %>
+      <br>
+      <%= link_to "牛肉", category_path(3) %>
+    </div>
+    <div class="col-md-4">
+      <%= link_to image_tag('c4.png', {:size => "300x300", :border => '0', :alt => 'ごはんもの'}), category_path(4) %>
+      <br>
+      <%= link_to "ごはんもの", category_path(4) %>
+    </div>
+    <div class="col-md-4">
+      <%= link_to image_tag('c5.png', {:size => "300x300", :border => '0', :alt => '魚'}), category_path(5) %>
+      <br>
+      <%= link_to "魚", category_path(5) %>
+    </div>
+    <div class="col-md-4">
+      <%= link_to image_tag('c6.png', {:size => "300x300", :border => '0', :alt => '野菜'}), category_path(6) %>
+      <br>
+      <%= link_to "野菜", category_path(6) %>
+    </div>
+    <div class="col-md-4">
+      <%= link_to image_tag('c7.png', {:size => "300x300", :border => '0', :alt => 'パスタ'}), category_path(7) %>
+      <br>
+      <%= link_to "パスタ", category_path(7) %>
+    </div>
+    <div class="col-md-4">
+      <%= link_to image_tag('c8.png', {:size => "300x300", :border => '0', :alt => '麺類'}), category_path(8) %>
+      <br>
+      <%= link_to "麺", category_path(8) %>
+    </div>
+  </div>
+</div>
