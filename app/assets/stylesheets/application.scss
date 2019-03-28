@@ -71,7 +71,6 @@ body    {
     color: #090b0b;
     display: inline-block;
     padding: 0 18px;
-    border-radius: 100px;
     font-weight: bold;
 }
 
@@ -82,7 +81,6 @@ body    {
     font-size: 14px;
     display: inline-block;
     padding: 0 18px;
-    border-radius: 100px;
     font-weight: bold;
 }
 
@@ -109,14 +107,17 @@ a:hover{color:#090b0b;}
 a:active{color:#090b0b;} 
 
 html, body {
-  height: 100%;
-  margin: 0;
+    height: 100%;
+    margin: 0;
 }
 .container {
-  min-height: 100%;
-  margin-bottom: -50px;
+    min-height: 100%;
+    margin-bottom: -50px;
 }
 .footer {
-  height: 100px;
-  background-color: #F6F4F4;
+    height: 100px;
+    background-color: #F6F4F4;
+}
+.footermess{
+    text-align: center;
 }
