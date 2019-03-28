@@ -2,10 +2,9 @@ ja:
   shared:
     header:
       home: ホーム
-      new_recipe: レシピ投稿
-      new_registration: 新規登録
+      all_recipe: 全レシピ一覧
+      category: カテゴリ別
       edit_registration: 設定変更
-      log_out: ログアウト
-      log_in: ログイン
+      log_in: ログイン＆新規登録
       search: 検索
-      category: カテゴリー一覧
+      howto: 料理難解用語

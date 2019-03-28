@@ -1,0 +1,25 @@
+<div class="col-md-10 offset-md-1 mt-5">
+  <div class="row">
+    <div class="col-md-4 mb-4">
+    <% if @howto.url.blank? && @howto.image.attached? %>
+      <%= image_tag @howto.image.variant(resize: "300x300"), class: "img-thumbnail" %>
+    <% elsif @howto.image.attached? %>
+    <a href="<%= @howto.url %>" rel="ar">
+      <%= image_tag @howto.image.variant(resize: "300x300"), class: "img-thumbnail" %>
+    </a>
+    <% else %>
+      <%= image_tag "img_warning.png", class: "img-thumbnail" %>
+    <% end %>
+    </div>
+    <div class="col-md-8">
+      <h2><%= @howto.title %></h2>
+      <hr>
+      <b><%= t '.howto' %>：</b><%= simple_format @howto.body %>
+      <hr>
+    </div>
+    <p class="padding"></p>
+    <div class="col-3 right">
+      <%= link_to t(".return"), :back, class: "btn btn-secondary ml-2" %>
+    </div>
+  </div>
+</div>

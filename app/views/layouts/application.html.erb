@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Zuborameshi</title>
+    <title>ズボラメシ</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag('favicon.ico') %>
   <style type="text/scss">
+  <meta http-equiv="Content-Style-Type" content="text/css">
   </style>
   </head>
 
   <body>
-    <!-- パーシャルフォームheaderの呼び出し -->
     <%= render "shared/header" %>
     <div class="container">
-      <!-- パーシャルフォームflashの呼び出し -->
       <div class="row">
         <div class="col-md-12">
           <%= render "shared/flash" %>
@@ -25,5 +25,8 @@
         <%= yield %>
       </div>
     </div>
+    <footer class="footer">
+    <%= render "shared/footer" %>
+    </footer>
   </body>
 </html>

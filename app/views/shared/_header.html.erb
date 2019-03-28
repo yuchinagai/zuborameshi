@@ -2,37 +2,30 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-    <!-- ロゴ画像はaタグnavbar-brandの背景画像としてcssで記述 -->
     <a class="navbar-brand" href=".."></a>
   <div class="collapse navbar-collapse" id="navbarToggler">
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    <ul class="navbar-nav mr-auto mt-2 ">
       <li class="nav-item">
         <%= link_to t(".home"), root_path, class: "nav-link" %>
       </li>
       <li class="nav-item">
-        <%= link_to t(".new_recipe"), new_recipe_path, class: "nav-link" %>
+        <%= link_to t(".all_recipe"), recipes_all_path, class: "nav-link" %>
       </li>
       <li class="nav-item">
-        <%= link_to t(".category"), categories_path, class: "nav-link" %>
+        <%= link_to t(".howto"), howtos_path, class: "nav-link" %>
       </li>
       <% if user_signed_in? %>
         <li class="nav-item">
           <%= link_to t(".edit_registration"), edit_user_registration_path, class: "nav-link" %>
         </li>
-        <li class="nav-item">
-          <%= link_to t(".log_out"), destroy_user_session_path, method: :delete, class: "nav-link" %>
-        </li>
       <% else %>
-        <li class="nav-item">
-          <%= link_to t(".new_registration"), new_user_registration_path, class: "nav-link" %>
-        </li>
         <li class="nav-item">
           <%= link_to t(".log_in"), new_user_session_path, class: "nav-link" %>
         </li>
       <% end %>
     </ul>
-    <%= search_form_for @q, class: "form-inline my-2 my-lg-0" do |f| %>
-      <%= f.search_field :title_or_body_or_material_cont, class: "form-control mr-sm-2" %>
+    <%= search_form_for @q, url: recipes_all_path, class: "form-inline my-2 my-lg-0" do |f| %>
+      <%= f.search_field :title_or_body_or_material_cont, placeholder: '料理名や素材を入力', class: "form-control mr-sm-2" %>
       <%= f.submit t(".search"), class: "btn btn-info my-2 my-sm-0" %>
     <% end %>
   </div>

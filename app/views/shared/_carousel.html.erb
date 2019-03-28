@@ -1,0 +1,22 @@
+<div id="carousel-2" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000" data-pause=false>
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-2" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-2" data-slide-to="1"></li>
+    <li data-target="#carousel-2" data-slide-to="2"></li>
+    <li data-target="#carousel-2" data-slide-to="3"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+      <%= link_to image_tag('cp.png', {:size => "1200x400", :class => 'd-block img-fluid', :alt => 'responsive image'}), campaign_recipes_path %>
+    </div>
+    <div class="carousel-item">
+      <%= link_to image_tag('meat.png', {:size => "1200x400", :class => 'd-block img-fluid', :alt => 'responsive image'}), category_path(1) %>
+    </div>
+    <div class="carousel-item">
+      <%= link_to image_tag('fish.png', {:size => "1200x400", :class => 'd-block img-fluid', :alt => 'responsive image'}), category_path(5) %>
+    </div>
+    <div class="carousel-item">
+      <%= link_to image_tag('veg.png', {:size => "1200x400", :class => 'd-block img-fluid', :alt => 'responsive image'}), category_path(6) %>
+    </div>
+  </div>
+</div>

@@ -14,10 +14,10 @@
 @import "bootstrap";
 
 .navbar-brand {
-  background: url("logo.png") no-repeat left center;
-  background-size: contain;
-  height: 50px;
-  width: 153px;
+    background: url("https://s3-ap-northeast-1.amazonaws.com/zuborameshiimage/logo.png") no-repeat left center;
+    background-size: contain;
+    height: 50px;
+    width: 153px;
 }
 
 body    {
@@ -25,7 +25,102 @@ body    {
 }
 
 .user-box {
-  padding: 30px;
-  border: 1px solid #dcdcdc;
-  background-color: #f8f8ff;
+    padding: 30px;
+    border: 1px solid #dcdcdc;
+    background-color: #f8f8ff;
+}
+
+.message {
+    position: relative;
+}
+.message span.remark {
+    display: none;
+}
+.message a:hover span.remark {
+    background: none repeat scroll 0 0 #FF9933;
+    color: #090b0b;
+    display: block;
+    margin: 0.5em;
+    padding: 0.5em;
+    position: absolute;
+    top: 50px;
+    width: 5em;
+}
+
+.message2 {
+    position: relative;
+}
+.message2 span.remark {
+    display: none;
+}
+.message2 a:hover span.remark {
+    background: none repeat scroll 0 0 #F6F4F4;
+    color: #090b0b;
+    display: block;
+    margin: 0.5em;
+    padding: 0.5em;
+    position: absolute;
+    top: 50px;
+    width:  8em;
+}
+
+.iine_button{
+    background: #FF9933;
+    line-height: 42px;
+    font-size: 14px;
+    color: #090b0b;
+    display: inline-block;
+    padding: 0 18px;
+    font-weight: bold;
+}
+
+.muzukasiine_button{
+    background: #F6F4F4;
+    line-height: 42px;
+    color: #090b0b;
+    font-size: 14px;
+    display: inline-block;
+    padding: 0 18px;
+    font-weight: bold;
+}
+
+.buttons {  
+    width: 100%;
+    margin: 0 auto;
+}  
+.button1 {  
+    width: 50%;
+    float: left;
+}  
+.button2 {  
+    width: 50%;
+    float: left;
+}  
+
+.padding {
+    padding: 50px;
+}
+
+a:link {color:#090b0b;}
+a:visited{color:#090b0b;} 
+a:hover{color:#090b0b;} 
+a:active{color:#090b0b;} 
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+.container {
+    min-height: 100%;
+    margin-bottom: -50px;
+}
+.footer {
+    height: 100px;
+    background-color: #F6F4F4;
+}
+.footermess{
+    text-align: center;
+}
+.right {
+    margin-left: auto;
 }

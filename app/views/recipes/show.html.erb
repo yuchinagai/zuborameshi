@@ -1,26 +1,46 @@
 <div class="col-md-10 offset-md-1 mt-5">
   <div class="row">
     <div class="col-md-4 mb-4">
-      <!-- ビューヘルパー利用 -->
       <%= show_recipe_image @recipe %>
+      <% if user_signed_in? %>
+        <div class="buttons row mt-4 text-center">
+          <div class="button1 iine_button message">
+            <a><%= render 'likes/like', recipe: @recipe %><span class="remark">いいね！</span></a>
+          </div>
+          <div class="button2 muzukasiine_button message2">
+            <a><%= render 'hards/hard', recipe: @recipe %><span class="remark">むずかしいね！</span></a>
+          </div>
+        </div>
+      <% else %>
+        <div class="buttons row mt-4 text-center">
+          <div class="button1 iine_button message">
+            <a>😋 <%= @recipe.likes_count %><span class="remark">いいね！</span></a>
+          </div>
+          <div class="button2 muzukasiine_button message2">
+            <a>😵 <%= @recipe.hards_count %><span class="remark">むずかしいね！</span></a>
+          </div>
+        </div>
+      <% end %>
     </div>
     <div class="col-md-8">
       <h2><%= @recipe.title %></h2>
         <hr>
-        <b><%= t '.category' %>：</b><%= @recipe.category&.name %>
+        <b><%= link_to "#{t '.category'}", categories_path %>：</b>
+        <%= link_to "#{@recipe.category&.name}", category_path("#{@recipe.category_id}") %>
         <hr>
         <b><%= t '.material' %>：</b><%= simple_format @recipe.material %>
+        <hr>
+        <b><%= t '.body' %>：</b><%= simple_format @recipe.body %>
+        <hr>
+        <b><%= t '.point' %>：</b><%= simple_format @recipe.point %>
+        <hr>
+        <%= render partial: "reviews/review", collection: @recipe.reviews %>
+        <p class="padding">
+          <% if user_signed_in? %>
+            <%= link_to t(".review_new"), new_recipe_review_path(@recipe), class: "btn btn-info" %>
+          <% end %>
+        <%= link_to t(".return"), recipes_path, class: "btn btn-secondary" %>
+        </p>
     </div>
   </div>
-  <hr>
-  <h4><%= t '.body' %></h4>
-  <%= simple_format @recipe.body %>
-  <hr>
-  <b><%= t '.point' %>：</b><%= simple_format @recipe.point %>
-  <% if user_signed_in? %>
-    <%= link_to t(".review_new"), new_recipe_review_path(@recipe), class: "btn btn-info" %>
-  <% end %>
-  <%= link_to t(".return"), recipes_path, class: "btn btn-secondary" %>
-  <hr>
-  <%= render partial: "reviews/review", collection: @recipe.reviews %>
 </div>

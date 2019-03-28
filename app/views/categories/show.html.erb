@@ -1,14 +1,33 @@
 <% @recipes.each do |recipe| %>
-  <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+  <div class="col-lg-4 col-md-4 col-sm-6 mb-3 text-center">
     <%= show_recipe_image recipe %>
     <h4 class="mt-2"><%= link_to recipe.title, recipe_path(recipe) %></h4>
-    <p><b><%= t '.category' %>：</b><%= recipe.category&.name %></p>
+    <hr>
+    <p>
+      <b><%= link_to "#{t '.category'}", categories_path %>：</b>
+      <%= link_to "#{recipe.category&.name}", category_path("#{recipe.category_id}") %>
+    </p>
     <hr>
     <b><%= t '.material' %></b>
     <div><%= simple_format recipe.material %></div>
     <hr>
-    <p><b><%= t ".point" %></b><br>
-    <%= t (recipe.point) %></p>
+    <p>
+      <b><%= t ".point" %></b><br>
+      <%= t (recipe.point) %>
+    </p>
+    <hr>
+      <div class="buttons row mt-4">
+        <div class="button1 iine_button message">
+          <a>😋 <%= recipe.likes_count %><span class="remark">いいね！</span></a>
+        </div>
+        <div class="button2 muzukasiine_button message2">
+          <a>😵 <%= recipe.hards_count %><span class="remark">むずかしいね！</span></a>
+        </div>
+      </div>
   </div>
 <% end %>
+<p class="padding"></p>
+<div class="col-3 right">
+  <%= link_to t(".return"), :back, class: "btn btn-secondary ml-2" %>
 </div>
+<p class="padding"></p>
