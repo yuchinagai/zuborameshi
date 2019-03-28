@@ -19,6 +19,7 @@ ja:
       new:
         title: ログイン
         submit: ログイン
+        rememberme: 次回から自動的にログイン
     shared:
       links:
         log_in: ログイン
