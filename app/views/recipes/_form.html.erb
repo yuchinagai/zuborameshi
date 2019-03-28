@@ -1,5 +1,4 @@
 <%= form_with model: recipe, local: true do |form| %>
-  <!-- 変数をrecipeをobjという名前で渡します。他のモデルのエラー内容を表示する可能性があるので、汎用性のあるobjという名前にしています。 -->
   <%= render "shared/errors", obj: recipe %>
   <div class="form-group">
     <%= form.label :title %>

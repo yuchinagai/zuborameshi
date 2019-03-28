@@ -1,7 +1,6 @@
 <div class="col-md-10 offset-md-1 mt-5">
   <div class="row">
     <div class="col-md-4 mb-4">
-      <!-- ビューヘルパー利用 -->
       <%= show_recipe_image @recipe %>
       <% if user_signed_in? %>
         <div class="buttons row mt-4 text-center">
@@ -37,9 +36,9 @@
         <hr>
         <%= render partial: "reviews/review", collection: @recipe.reviews %>
         <p class="padding">
-        <% if user_signed_in? %>
-          <%= link_to t(".review_new"), new_recipe_review_path(@recipe), class: "btn btn-info" %>
-        <% end %>
+          <% if user_signed_in? %>
+            <%= link_to t(".review_new"), new_recipe_review_path(@recipe), class: "btn btn-info" %>
+          <% end %>
         <%= link_to t(".return"), recipes_path, class: "btn btn-secondary" %>
         </p>
     </div>
