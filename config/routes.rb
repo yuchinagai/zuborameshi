@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :recipes do
     resources :reviews, except: :index
     collection do
-      get :all
+      get :all, :campaign
     end
   end
   resources :categories
