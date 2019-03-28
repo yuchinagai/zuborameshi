@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root "recipes#index"
   get "recipes/all" => "recipes#all"
+  get 'search', to: 'recipes#all'
   devise_for :users
   resources :recipes do
     resources :reviews, except: :index

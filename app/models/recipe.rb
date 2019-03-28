@@ -14,7 +14,7 @@ class Recipe < ApplicationRecord
   validates :body, presence: true, length: { maximum: 1000 }
   validates :point, presence: true, length: { maximum: 100 }
 
-  scope :find_newest_recipes, -> (p) { page.order('RANDOM()') }
+  scope :find_newest_recipes, -> (p) { page(p).order('RANDOM()') }
 
   before_save do
     self.image = new_image if new_image

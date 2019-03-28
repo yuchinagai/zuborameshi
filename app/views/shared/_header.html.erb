@@ -24,8 +24,8 @@
         </li>
       <% end %>
     </ul>
-    <%= search_form_for @q, class: "form-inline my-2 my-lg-0" do |f| %>
-      <%= f.search_field :title_or_body_or_material_cont, class: "form-control mr-sm-2" %>
+    <%= search_form_for @q, url: recipes_all_path, class: "form-inline my-2 my-lg-0" do |f| %>
+      <%= f.search_field :title_or_body_or_material_cont, placeholder: '料理名や素材を入力', class: "form-control mr-sm-2" %>
       <%= f.submit t(".search"), class: "btn btn-info my-2 my-sm-0" %>
     <% end %>
   </div>
